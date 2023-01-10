@@ -9,10 +9,14 @@
 # Então dê a cada empregado um aumento de 10% e exiba novamente o salário anual de cada empregado.
 
 class Empregado
-    def initialize
-        @@firstName
-        @@lastName
-        @@monthlySalary
+    def initialize(firstName, lastName, monthlySalary)
+        @@firstName = firstName
+        @@lastName = lastName
+        @@monthlySalary = monthlySalary
+
+        if @@monthlySalary <= 0.0
+            @@monthlySalary = 0.0
+        end
     end
 
     def setFirstName
@@ -39,5 +43,16 @@ class Empregado
         @@monthlySalary
     end
 
-    def 
+    def annualSalary
+        @@monthlySalary * 12
+    end
 end
+
+empregado1 = Empregado.new("Alana", "Stark", 5600)
+salaryemp1 = empregado1.annualSalary()
+puts "O salário anual de #@@firtName #@@lastName é #{salaryemp1}"
+
+empregado2 = Empregado.new("Aria", "Martell", 2380)
+salaryemp2 = empregado2.annualSalary()
+puts "O salário anual de #@@firtName #@@lastName é #{salaryemp2}"
+
