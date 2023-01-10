@@ -9,7 +9,7 @@
 # Então dê a cada empregado um aumento de 10% e exiba novamente o salário anual de cada empregado.
 
 class Empregado
-    def inicialize
+    def initialize
         @@firstName
         @@lastName
         @@monthlySalary

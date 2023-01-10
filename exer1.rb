@@ -1,4 +1,4 @@
-# [deite] Crie uma classe chamada Invoice que possa ser utilizado por uma loja de suprimentos
+# Crie uma classe chamada Invoice que possa ser utilizado por uma loja de suprimentos
 # de informática para representar uma fatura de um item vendido na loja. Uma fatura deve incluir as seguintes
 # informações como atributos:
 # • o número do item faturado,
@@ -13,11 +13,19 @@
 # classe Invoice.
 
 class Invoice
-    def inicialize(ni, d, q, p)
-        @nitem = ni
-        @description = d
-        @quantity = q
-        @price = p
+    def initialize(nitem, description, quantity, price)
+        @nitem = nitem
+        @description = description
+        @quantity = quantity
+        @price = price
+
+        if @quantity <= 0 
+            @quantity = 0
+        end
+
+        if @price <= 0.0
+            @price = 0.0
+        end
     end
 
     def setNitem
@@ -53,11 +61,10 @@ class Invoice
     end
 
     def getInvoiceAmount
-        result
-        (@quantity * @price) / @nitem = result
+        @quantity * @price
     end
 end
 
-invoice = Invoice.new(4, 6.90, 8)
+invoice = Invoice.new(1, "descrição", 2, 6.9)
 call = invoice.getInvoiceAmount()
 puts "O valor da fatura é #{call}"

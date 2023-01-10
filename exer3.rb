@@ -12,7 +12,7 @@
 # Garanta que uma instância desta classe sempre esteja em um estado consistente.
 
 class Date
-    def inicialize()
+    def initialize()
         @@day = 09
         @@month = 01
         @@year = 2023
