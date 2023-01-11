@@ -61,4 +61,3 @@ end
     empregado2 = Empregado.new("Aria", "Martell", 2380)
     empregado2.annualSalary()
     empregado2.additionalBonus()
-

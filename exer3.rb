@@ -17,6 +17,9 @@ class Date
         @@month = 01
         @@year = 2023
 
+        if @@day > 31 && < 01
+            puts "Dia #@@day não é válido"
+        end
     end
 
 end
