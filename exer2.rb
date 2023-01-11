@@ -43,16 +43,27 @@ class Empregado
         @@monthlySalary
     end
 
-    def annualSalary
-        @@monthlySalary * 12
-    end
 end
 
-empregado1 = Empregado.new("Alana", "Stark", 5600)
-salaryemp1 = empregado1.annualSalary()
-puts "O salário anual de #@@firtName #@@lastName é #{salaryemp1}"
+class Salario < Empregado
 
-empregado2 = Empregado.new("Aria", "Martell", 2380)
-salaryemp2 = empregado2.annualSalary()
-puts "O salário anual de #@@firtName #@@lastName é #{salaryemp2}"
+    def annualSalary
+        @@salaryemp = @@monthlySalary * 12
+        puts "O salário anual de #@@firstName #@@lastName é #@@salaryemp"
+    end
 
+    empregado1 = Salario.new("Alana", "Stark", 5600)
+    empregado2 = Salario.new("Aria", "Martell", 2380)
+
+    empregado1.annualSalary()
+    empregado2.annualSalary()
+
+    def additionalBonus
+        @@increase = (10 * @@monthlySalary / 100) + @@salaryemp
+        puts "Com um aumento de 10% o novo salário anual de #@@firstName #@@lastName é #@@increase"
+    end
+
+    empregado1.additionalBonus()
+    empregado2.additionalBonus()
+
+end
