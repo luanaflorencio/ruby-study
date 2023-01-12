@@ -12,14 +12,58 @@
 # Garanta que uma instância desta classe sempre esteja em um estado consistente.
 
 class Date
-    def initialize()
-        @@day = 09
-        @@month = 01
-        @@year = 2023
+    def initialize(day, month, year)
+        @@day = day
+        @@month = month
+        @@year = year
 
-        if @@day > 31 && < 01
+        if @@day < 01 || > 31 
             puts "Dia #@@day não é válido"
         end
+
+        if @@month < 01 || > 12
+            puts "#@@month não é um mês válido"
+        end 
+    end
+
+    def initialize()
+        @@date = Time.new
+        @@day = date.day
+        @@month = date.month
+        @@year = date.year
+    end
+
+    def setDay
+        @@day
+    end
+
+    def setMonth
+        @@month
+    end
+
+    def setYear
+        @@year
+    end
+
+    def getDay
+        @@day
+    end
+
+    def getMonth
+        @@month
+    end
+
+    def getYear
+        @@year
+    end
+
+    def format
+        puts @@date.to_s
+        puts @@date.strftime(%d/%m/%Y)
+        puts @@day + 1 / @@month / @@year
     end
 
 end
+
+date = Date.new(Time.now)
+seeDate = date.initialize()
