@@ -17,11 +17,11 @@ class Date
         @@month = month
         @@year = year
 
-        if @@day < 01 || > 31 
+        if @@day < 01 || @@day > 31 
             puts "Dia #@@day não é válido"
         end
 
-        if @@month < 01 || > 12
+        if @@month < 01 || @@month > 12
             puts "#@@month não é um mês válido"
         end 
     end
@@ -59,7 +59,7 @@ class Date
 
     def format
         puts @@date.to_s
-        puts @@date.strftime(%d/%m/%Y)
+        puts @@date.strftime("%d/%m/%Y")
         puts @@day + 1 / @@month / @@year
     end
 
