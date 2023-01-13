@@ -65,5 +65,5 @@ class Date
 
 end
 
-date = Date.new(Time.now)
-seeDate = date.initialize()
+date = Date.new()
+seeDate = date.format()
