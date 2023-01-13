@@ -28,9 +28,9 @@ class Date
 
     def initialize()
         @@date = Time.new
-        @@day = date.day
-        @@month = date.month
-        @@year = date.year
+        @@day = @@date.day
+        @@month = @@date.month
+        @@year = @@date.year
     end
 
     def setDay
