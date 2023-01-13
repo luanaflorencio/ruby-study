@@ -9,8 +9,7 @@
 # ser configurada como 0. Se o preço por item não for positivo ele deve ser configurado como 0.0. Forneça
 # um método set e um método get para cada variável de instância. Além disso, forneça um método chamado
 # getInvoiceAmount que calcula o valor da fatura (isso é, multiplica a quantidade pelo preço por item) e
-# depois retorna o valor como um double. Escreva um aplicativo de teste que demonstra as capacidades da
-# classe Invoice.
+# depois retorna o valor como um double.
 
 class Invoice
     def initialize(nitem, description, quantity, price)

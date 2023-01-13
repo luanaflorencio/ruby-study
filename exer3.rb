@@ -7,9 +7,6 @@
 # 4. Forneça um método set um get para cada atributo.
 # 5. Forneça o método toString para retornar uma representação da ata como string. Considere que a
 # data deve ser formatada mostrando o dia, o mês e o ano separados por barra (/).
-# 6. Forneça uma operação para avançar uma data para o dia seguinte.
-# 7. Escreva um aplicativo de teste que demonstra as capacidades da classe.
-# Garanta que uma instância desta classe sempre esteja em um estado consistente.
 
 class Date
     def initialize(day, month, year)
@@ -60,7 +57,6 @@ class Date
     def format
         puts @@date.to_s
         puts @@date.strftime("%d/%m/%Y")
-        puts @@day + 1 / @@month / @@year
     end
 
 end
